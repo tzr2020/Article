@@ -205,7 +205,7 @@ func httpServeByStruct4() {
 }
 ```
 
-调用 `http.Handle` 函数本质是代码的进一步封装，会使用内置的默认路由器注册处理器。
+`http.Handle` 函数的本质是代码的进一步封装，会使用内置的默认路由器注册处理器。
 
 > ```go
 > // 源码片段
@@ -228,7 +228,7 @@ func httpServeByStruct5() {
 }
 ```
 
-调用 `http.ListenAndServe` 函数本质也是代码的进一步封装，会创建服务器并设置字段，然后启动服务器。
+`http.ListenAndServe` 函数的本质也是代码的进一步封装，会创建服务器并设置字段，然后启动服务器。
 
 > ```go
 > // 源码片段
@@ -297,7 +297,7 @@ func httpServeByFunc2() {
 }
 ```
 
-调用 `http.HandleFunc` 函数本质是代码的进一步封装，使用内置的默认路由器，调用 `ServeMux.Handle` 方法注册处理器和使用 `http.HandlerFunc` 进行类型转换。
+`http.HandleFunc` 函数的本质是代码的进一步封装，使用内置的默认路由器，调用 `ServeMux.Handle` 方法注册处理器和使用 `http.HandlerFunc` 进行类型转换。
 
 > ```go
 > // 源码片段
