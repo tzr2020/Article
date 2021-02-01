@@ -52,7 +52,7 @@ func httpServeByStruct() {
 	}
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -125,7 +125,7 @@ func httpServeByStruct2() {
 	mux.Handle("/about", &mh2)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -167,7 +167,7 @@ func httpServeByStruct3() {
 	http.DefaultServeMux.Handle("/index", &mh)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -200,7 +200,7 @@ func httpServeByStruct4() {
 	http.Handle("/index", &mh)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -223,7 +223,7 @@ func httpServeByStruct5() {
 	http.Handle("/index", &mh)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -262,7 +262,7 @@ func httpServeByFunc() {
 	http.Handle("/index", http.HandlerFunc(index))
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -292,7 +292,7 @@ func httpServeByFunc2() {
 	http.HandleFunc("/index", index)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
@@ -375,7 +375,7 @@ func httpServeByStruct() {
 	}
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -394,7 +394,7 @@ func httpServeByStruct2() {
 	mux.Handle("/about", &mh2)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -409,7 +409,7 @@ func httpServeByStruct3() {
 	http.DefaultServeMux.Handle("/index", &mh)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -424,7 +424,7 @@ func httpServeByStruct4() {
 	http.Handle("/index", &mh)
 
 	if err := server.ListenAndServe(); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -434,7 +434,7 @@ func httpServeByStruct5() {
 	http.Handle("/index", &mh)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -449,7 +449,7 @@ func httpServeByFunc() {
 	http.Handle("/index", http.HandlerFunc(index))
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 
@@ -457,7 +457,7 @@ func httpServeByFunc2() {
 	http.HandleFunc("/index", index)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
+		log.Fatalln(err)
 	}
 }
 ```
